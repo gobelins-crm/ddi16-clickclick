@@ -30,4 +30,8 @@ public class MainActivityFragment extends Fragment implements View.OnClickListen
     public void onClick(View v) {
         // on click
     }
+
+    public interface OnFragmentInteractionListener {
+        void onButtonClick();
+    }
 }
