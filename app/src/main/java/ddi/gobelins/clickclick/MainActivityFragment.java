@@ -12,6 +12,8 @@ import android.widget.Button;
  */
 public class MainActivityFragment extends Fragment implements View.OnClickListener {
 
+    private OnFragmentInteractionListener listener;
+
     public MainActivityFragment() {
     }
 
@@ -28,7 +30,9 @@ public class MainActivityFragment extends Fragment implements View.OnClickListen
 
     @Override
     public void onClick(View v) {
-        // on click
+        if(listener != null) {
+            listener.onButtonClick();
+        }
     }
 
     public interface OnFragmentInteractionListener {
